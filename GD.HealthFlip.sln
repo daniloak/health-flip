@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{15CF5491-FC93-42BF-9428-DCFDA0E1A0CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7CF6D2F6-12E2-4EBC-A884-B20FCAAAFDF7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GD.HealthFlip.UnitTests", "tests\GD.HealthFlip.UnitTests\GD.HealthFlip.UnitTests.csproj", "{A75C6861-EA51-4088-AE4A-41CB05DEF6A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "env", "env", "{487719C3-BCC9-4D08-8721-AC60750DEB62}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GD.HealthFlip.Application", "src\GD.HealthFlip.Application\GD.HealthFlip.Application.csproj", "{4873831D-1686-4F81-A6CE-C8AE2C0FFA77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GD.HealthFlip.Domain", "src\GD.HealthFlip.Domain\GD.HealthFlip.Domain.csproj", "{3B9B9AD4-04B0-49F1-A896-CBBE2A4B57AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GD.HealthFlip.Infra.Data.EF", "src\GD.HealthFlip.Infra.Data.EF\GD.HealthFlip.Infra.Data.EF.csproj", "{7CE8671F-1812-4334-B2C6-07BA3DAA8FAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GD.HealthFlip.Api", "src\GD.HealthFlip.Api\GD.HealthFlip.Api.csproj", "{9FCB1309-BE21-469D-8DA2-E0311AADAC97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A75C6861-EA51-4088-AE4A-41CB05DEF6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75C6861-EA51-4088-AE4A-41CB05DEF6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75C6861-EA51-4088-AE4A-41CB05DEF6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75C6861-EA51-4088-AE4A-41CB05DEF6A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4873831D-1686-4F81-A6CE-C8AE2C0FFA77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4873831D-1686-4F81-A6CE-C8AE2C0FFA77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4873831D-1686-4F81-A6CE-C8AE2C0FFA77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4873831D-1686-4F81-A6CE-C8AE2C0FFA77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9B9AD4-04B0-49F1-A896-CBBE2A4B57AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9B9AD4-04B0-49F1-A896-CBBE2A4B57AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9B9AD4-04B0-49F1-A896-CBBE2A4B57AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9B9AD4-04B0-49F1-A896-CBBE2A4B57AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE8671F-1812-4334-B2C6-07BA3DAA8FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE8671F-1812-4334-B2C6-07BA3DAA8FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE8671F-1812-4334-B2C6-07BA3DAA8FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE8671F-1812-4334-B2C6-07BA3DAA8FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FCB1309-BE21-469D-8DA2-E0311AADAC97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FCB1309-BE21-469D-8DA2-E0311AADAC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FCB1309-BE21-469D-8DA2-E0311AADAC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FCB1309-BE21-469D-8DA2-E0311AADAC97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A75C6861-EA51-4088-AE4A-41CB05DEF6A8} = {7CF6D2F6-12E2-4EBC-A884-B20FCAAAFDF7}
+		{4873831D-1686-4F81-A6CE-C8AE2C0FFA77} = {15CF5491-FC93-42BF-9428-DCFDA0E1A0CC}
+		{3B9B9AD4-04B0-49F1-A896-CBBE2A4B57AF} = {15CF5491-FC93-42BF-9428-DCFDA0E1A0CC}
+		{7CE8671F-1812-4334-B2C6-07BA3DAA8FAF} = {15CF5491-FC93-42BF-9428-DCFDA0E1A0CC}
+		{9FCB1309-BE21-469D-8DA2-E0311AADAC97} = {15CF5491-FC93-42BF-9428-DCFDA0E1A0CC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C7BFD35-00EE-414B-8CF1-DDBCE0E09618}
+	EndGlobalSection
+EndGlobal
