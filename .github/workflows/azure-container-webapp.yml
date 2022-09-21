@@ -19,7 +19,7 @@ jobs:
     needs: build
     uses: ./.github/workflows/deploy.yml
     with:
-      environment: development
+      environment: Development
       azure-web-app-name: ase-dev-healthflip
     secrets:
       AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
@@ -29,7 +29,7 @@ jobs:
     needs: deploy-development
     uses: ./.github/workflows/deploy.yml
     with:
-      environment: staging
+      environment: Staging
       azure-web-app-name: ase-stg-healthflip
     secrets:
       AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
@@ -39,7 +39,7 @@ jobs:
     needs: deploy-staging
     uses: ./.github/workflows/deploy.yml
     with:
-      environment: production
+      environment: Production
       azure-web-app-name: ase-prd-healthflip
     secrets:
       AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
