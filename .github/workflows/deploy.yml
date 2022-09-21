@@ -7,9 +7,6 @@ on:
       azure-web-app-name:
         required: true
         type: string
-    secrets:
-      envPAT:
-        required: true
 
 jobs:
   deploy:
