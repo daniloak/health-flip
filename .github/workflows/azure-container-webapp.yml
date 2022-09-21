@@ -14,26 +14,9 @@ jobs:
     uses: ./.github/workflows/build.yml
 
   deploy:
+    needs: build
     uses: ./.github/workflows/deply.yml
     with:
       environment: development
       azure-web-app-name: ase-dev-healthflip
-      secrets: inherit
-
-    needs: build
-
-    environment:
-      name: 'development'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-      - name: Lowercase the repo name
-        run: echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
-
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@0b651ed7546ecfc75024011f76944cb9b381ef1e
-        with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: 'ghcr.io/${{ env.REPO }}:${{ github.sha }}'
+      secrets: inherit  
