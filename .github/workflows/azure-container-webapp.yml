@@ -12,12 +12,12 @@ permissions:
 jobs:
   build:
     name: Build
-    uses: ./.github/workflows/templates/build.yml
+    uses: ./.github/workflows/build.yml
 
   deploy-development:
     name: Deploy
     needs: build
-    uses: ./.github/workflows/templates/deploy.yml
+    uses: ./.github/workflows/deploy.yml
     with:
       environment: Development
       azure-web-app-name: ase-dev-healthflip
@@ -27,7 +27,7 @@ jobs:
   deploy-staging:
     name: Deploy
     needs: deploy-development
-    uses: ./.github/workflows/templates/deploy.yml
+    uses: ./.github/workflows/deploy.yml
     with:
       environment: Staging
       azure-web-app-name: ase-stg-healthflip
@@ -37,7 +37,7 @@ jobs:
   deploy-production:
     name: Deploy
     needs: deploy-staging
-    uses: ./.github/workflows/templates/deploy.yml
+    uses: ./.github/workflows/deploy.yml
     with:
       environment: Production
       azure-web-app-name: ase-prd-healthflip
