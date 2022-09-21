@@ -7,12 +7,17 @@ on:
       azure-web-app-name:
         required: true
         type: string
+      secrets:
+        AZURE_WEBAPP_PUBLISH_PROFILE:
+          required: true
+          type: string
+
 
 jobs:
   deploy:
-    name: Deploy
+    name: Deploy ${{ inputs.environment }}
     runs-on: ubuntu-latest
-    
+
     environment:
       name: ${{ inputs.environment }}
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
