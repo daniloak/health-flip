@@ -2,8 +2,8 @@ on:
   workflow_call:
 
 jobs:
-  Build:    
-    name: Build Ubuntu
+  build:    
+    name: Application
     runs-on: ubuntu-latest
 
     steps:
