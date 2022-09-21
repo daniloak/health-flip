@@ -15,7 +15,7 @@ jobs:
 
   deploy:
     needs: build
-    uses: ./.github/workflows/deply.yml
+    uses: ./.github/workflows/deploy.yml
     with:
       environment: development
       azure-web-app-name: ase-dev-healthflip
