@@ -12,7 +12,7 @@ on:
         required: true
 
 jobs:
-  name: Deploy${{ inputs.environment }}
+  name: Deploy
   deploy:
     runs-on: ubuntu-latest
 
