@@ -1,12 +1,8 @@
 on:
   workflow_call:
-    inputs:
-      test:
-        required: false
-        type: string
 
 jobs:
-  build:    
+  Build:    
     name: Build Ubuntu
     runs-on: ubuntu-latest
 

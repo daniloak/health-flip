@@ -15,9 +15,13 @@ jobs:
 
   deploy:
     needs: build
+    strategy:
+      matrix:
+        environment: [development, staging, production]
+        azure-web-app-name: [ase-dev-healthflip, ase-stg-healthflip, ase-prd-healthflip]
     uses: ./.github/workflows/deploy.yml
     with:
-      environment: development
-      azure-web-app-name: ase-dev-healthflip
+      environment: ${{ matrix.environment }}
+      azure-web-app-name: ${{ matrix.azure-web-app-name }}
     secrets:
       AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
