@@ -6,8 +6,8 @@ on:
         type: string
 
 jobs:
-  build:
-    name: Build Ubuntu
+  name: Build Ubuntu
+  build:    
     runs-on: ubuntu-latest
 
     steps:
