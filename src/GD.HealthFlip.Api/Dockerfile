@@ -7,6 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
+COPY ["Directory.Packages.props", ""]
 COPY ["src/GD.HealthFlip.Api/GD.HealthFlip.Api.csproj", "GD.HealthFlip.Api/"]
 COPY ["src/GD.HealthFlip.Infrastructure/GD.HealthFlip.Infrastructure.csproj", "GD.HealthFlip.Infrastructure.EF/"]
 COPY ["src/GD.HealthFlip.Application/GD.HealthFlip.Application.csproj", "D.HealthFlip.Application/"]
