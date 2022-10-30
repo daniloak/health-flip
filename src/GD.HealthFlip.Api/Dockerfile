@@ -16,7 +16,7 @@ COPY ["src/GD.HealthFlip.SharedKernel/GD.HealthFlip.SharedKernel.csproj", "GD.He
 RUN ls
 RUN dotnet restore "GD.HealthFlip.Api/GD.HealthFlip.Api.csproj"
 COPY . .
-WORKDIR "/GD.HealthFlip.Api"
+WORKDIR "src/GD.HealthFlip.Api"
 RUN dotnet build "GD.HealthFlip.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
