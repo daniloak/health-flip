@@ -9,11 +9,11 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["Directory.Packages.props", ""]
 COPY ["src/GD.HealthFlip.Api/GD.HealthFlip.Api.csproj", "GD.HealthFlip.Api/"]
-COPY ["src/GD.HealthFlip.Infrastructure/GD.HealthFlip.Infrastructure.csproj", "GD.HealthFlip.Infrastructure.EF/"]
+COPY ["src/GD.HealthFlip.Infrastructure/GD.HealthFlip.Infrastructure.csproj", "GD.HealthFlip.Infrastructure/"]
 COPY ["src/GD.HealthFlip.Application/GD.HealthFlip.Application.csproj", "GD.HealthFlip.Application/"]
 COPY ["src/GD.HealthFlip.Core/GD.HealthFlip.Core.csproj", "GD.HealthFlip.Core/"]
 COPY ["src/GD.HealthFlip.SharedKernel/GD.HealthFlip.SharedKernel.csproj", "GD.HealthFlip.SharedKernel/"]
-RUN ls
+
 RUN dotnet restore "GD.HealthFlip.Api/GD.HealthFlip.Api.csproj"
 COPY . .
 WORKDIR "src/GD.HealthFlip.Api"
