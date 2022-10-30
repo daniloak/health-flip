@@ -1,17 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
+    <Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.1.3" />
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MediatR" Version="10.0.1" />
-  </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Ardalis.Result" />
+      <PackageReference Include="MediatR" />
+      <PackageReference Include="MediatR.Contracts" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\GD.HealthFlip.Domain\GD.HealthFlip.Domain.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Commands" />
+    </ItemGroup>
 
 </Project>

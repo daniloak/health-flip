@@ -8,9 +8,10 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["src/GD.HealthFlip.Api/GD.HealthFlip.Api.csproj", "src/GD.HealthFlip.Api/"]
-COPY ["src/GD.HealthFlip.Infra.Data.EF/GD.HealthFlip.Infra.Data.EF.csproj", "src/GD.HealthFlip.Infra.Data.EF/"]
+COPY ["src/GD.HealthFlip.Infrastructure/GD.HealthFlip.Infrastructure.csproj", "src/GD.HealthFlip.Infrastructure.EF/"]
 COPY ["src/GD.HealthFlip.Application/GD.HealthFlip.Application.csproj", "src/GD.HealthFlip.Application/"]
 COPY ["src/GD.HealthFlip.Domain/GD.HealthFlip.Domain.csproj", "src/GD.HealthFlip.Domain/"]
+COPY ["src/GD.HealthFlip.Domain/GD.HealthFlip.SharedKernel.csproj", "src/GD.SharedKernel.Domain/"]
 RUN dotnet restore "src/GD.HealthFlip.Api/GD.HealthFlip.Api.csproj"
 COPY . .
 WORKDIR "/src/src/GD.HealthFlip.Api"

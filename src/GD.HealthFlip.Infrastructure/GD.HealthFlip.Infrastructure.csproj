@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.1.3" />
+  
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\GD.HealthFlip.Core\GD.HealthFlip.Core.csproj" />
+    <ProjectReference Include="..\GD.HealthFlip.SharedKernel\GD.HealthFlip.SharedKernel.csproj" />
+  </ItemGroup>
+</Project>
