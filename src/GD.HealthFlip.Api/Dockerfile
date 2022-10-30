@@ -11,7 +11,7 @@ COPY ["src/GD.HealthFlip.Api/GD.HealthFlip.Api.csproj", "src/GD.HealthFlip.Api/"
 COPY ["src/GD.HealthFlip.Infrastructure/GD.HealthFlip.Infrastructure.csproj", "src/GD.HealthFlip.Infrastructure.EF/"]
 COPY ["src/GD.HealthFlip.Application/GD.HealthFlip.Application.csproj", "src/GD.HealthFlip.Application/"]
 COPY ["src/GD.HealthFlip.Domain/GD.HealthFlip.Domain.csproj", "src/GD.HealthFlip.Domain/"]
-COPY ["src/GD.HealthFlip.SharedKernel.csproj", "src/GD.SharedKernel.Domain/"]
+COPY ["src/GD.HealthFlip.SharedKernel.csproj", "src/GD.HealthFlip.SharedKernel/"]
 RUN dotnet restore "src/GD.HealthFlip.Api/GD.HealthFlip.Api.csproj"
 COPY . .
 WORKDIR "/src/src/GD.HealthFlip.Api"
